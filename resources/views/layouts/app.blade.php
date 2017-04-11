@@ -12,10 +12,10 @@
     <title>Laravel learning - @yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css',array(),true) }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/bootstrap.min.css',array(),true) }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ asset('css/2-col-portfolio.css',array(),true) }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/2-col-portfolio.css',array(),true) }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,10 +70,10 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{{ secure_asset('js/jquery.js',array(),true) }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ secure_asset('js/bootstrap.min.js',array(),true) }}"></script>
 
 </body>
 
