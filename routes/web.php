@@ -18,11 +18,7 @@ Route::get('/', function () {
 // ----BLOG ROUTES----
 Route::group(['prefix' => 'blog'], function () {
 
-  Route::get('/', function () {
-      return view('blog/mainPage');
-  });
+  Route::get('/', 'BlogController@index');
 
-  Route::get('/writepost', function () {
-      return view('blog/writePost');
-  });
+  Route::get('/writepost', 'BlogController@new');
 });

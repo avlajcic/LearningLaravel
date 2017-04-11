@@ -20,6 +20,7 @@
 							<label for="title">Title:</label>
 							<input type="text" class="form-control" name ="title">
 						</div>
+
 						<div class="form-group">
 							<label for="text">Text:</label>
 							<textarea class="form-control" rows="5" name="text"></textarea>
@@ -27,10 +28,11 @@
 
 						<label>Image:</label>
 						<div class="input-group">
-							<span class="btn btn-default btn-file input-group-addon">
-										Search <input type="file" class="file" name = "image" accept=".png, .jpg, .jpeg">
-							</span>
-							<input type="text" class='form-control filename' disabled></span>
+							<input type="text" class='form-control filename' id="upload-file-info" disabled>
+							<label class="btn btn-primary" for="my-file-selector">
+							    <input id="my-file-selector" type="file" style="display:none;" accept=".png, .jpg, .jpeg" onchange="$('#upload-file-info').val($(this).val().split('\\').pop());">
+							    Upload file
+							</label>
 						</div>
 
 						<br>
