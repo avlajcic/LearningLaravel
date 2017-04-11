@@ -1,3 +1,10 @@
+<p>Application can be seen at: <br>
+https://laravel-learning2017.herokuapp.com/
+</p>
+
+<p>This application serves as personal platform for learning Laravel.</p>
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

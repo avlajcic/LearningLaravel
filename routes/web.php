@@ -13,4 +13,16 @@
 
 Route::get('/', function () {
     return view('homepage');
+})->name("homepage");
+
+// ----BLOG ROUTES----
+Route::group(['prefix' => 'blog'], function () {
+
+  Route::get('/', function () {
+      return view('blog/mainPage');
+  });
+
+  Route::get('/writepost', function () {
+      return view('blog/writePost');
+  });
 });
