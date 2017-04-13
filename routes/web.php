@@ -19,6 +19,8 @@ Route::get('/', function () {
 Route::group(['prefix' => 'blog'], function () {
 
   Route::get('/', 'BlogController@index');
+  Route::post('/', 'BlogController@store');
 
   Route::get('/writepost', 'BlogController@new');
+  Route::get('/{id}', 'BlogController@show');
 });

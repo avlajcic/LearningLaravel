@@ -17,6 +17,13 @@
 				<h1 class="page-header">
 						Blog
 				</h1>
+
+				@foreach ($articles as $article)
+				    <a href="blog/{{ $article->id }}"><h2>{{ $article->title }}</h2></a>
+				    <p>{{ $article->body }}</p>
+						<hr>
+				@endforeach
+
 		</div>
 
 		<!-- Blog Sidebar Widgets Column -->

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 @section('title', 'Blog')
 
 @section('extraNav')
@@ -15,29 +15,22 @@
 		<div class="col-lg-8">
 				<!-- Title -->
 				<h1>New post</h1>
-				<form action="submitpost.php" method="post" enctype="multipart/form-data">
+				<form action="/blog" method="post">
+					 	{{ csrf_field() }}
 						<div class="form-group">
 							<label for="title">Title:</label>
 							<input type="text" class="form-control" name ="title">
 						</div>
 
 						<div class="form-group">
-							<label for="text">Text:</label>
-							<textarea class="form-control" rows="5" name="text"></textarea>
-						</div>
-
-						<label>Image:</label>
-						<div class="input-group">
-							<input type="text" class='form-control filename' id="upload-file-info" disabled>
-							<label class="btn btn-primary" for="my-file-selector">
-							    <input id="my-file-selector" type="file" style="display:none;" accept=".png, .jpg, .jpeg" onchange="$('#upload-file-info').val($(this).val().split('\\').pop());">
-							    Upload file
-							</label>
+							<label for="body">Text:</label>
+							<textarea class="form-control" rows="5" name="body"></textarea>
 						</div>
 
 						<br>
 						<input type="submit" class="btn btn-info" value="Pošalji">
 				</form>
+
 		</div>
 </div>
 @endsection
