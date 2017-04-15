@@ -28,10 +28,20 @@
 						</div>
 
 						<br>
-						<input type="submit" class="btn btn-info" value="Pošalji">
+						<input type="submit" class="btn btn-info" value="Publish">
 				</form>
+				@if (count($errors) > 0)
+				    <div class="alert alert-danger">
+				        <ul>
+				            @foreach ($errors->all() as $error)
+				                <li>{{ $error }}</li>
+				            @endforeach
+				        </ul>
+				    </div>
+				@endif
 
 		</div>
+
 </div>
 @endsection
 

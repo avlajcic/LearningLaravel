@@ -22,5 +22,9 @@ Route::group(['prefix' => 'blog'], function () {
   Route::post('/', 'BlogController@store');
 
   Route::get('/writepost', 'BlogController@new');
-  Route::get('/{id}', 'BlogController@show');
+
+  Route::post('/article/search', 'BlogController@search');
+  Route::get('/article/{id}', 'BlogController@show')->name('article');
+  Route::get('/deleteArticle/{id}', 'BlogController@destroy')->name('deleteArticle');
+  Route::post('/comment', 'CommentsController@store')->name('storeComment');
 });

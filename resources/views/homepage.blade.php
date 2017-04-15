@@ -16,12 +16,12 @@
 	<div class="row">
 		<div class="col-md-6 portfolio-item">
 			<a href="/blog">
-				<img class="img-responsive" src="http://placehold.it/700x400" alt="">
+				<img class="img-responsive" src="{{ secure_asset('images/blog.png',array(),true) }}" alt="">
 			</a>
 			<h3>
 				<a href="/blog">Blog</a>
 			</h3>
-			<p>Blog application where you can add new posts, search them or comment them.</p>
+			<p>A simple blog application where you can add, search or comment posts.</p>
 		</div>
 		<div class="col-md-6 portfolio-item">
 			<a href="#">
