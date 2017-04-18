@@ -49,7 +49,7 @@
 						</form>
 				</div>
 				<div>
-						 <a class="btn-lg btn-primary" href="blog/writepost">Novi clanak</a>
+						 <a class="btn-lg btn-primary" href="blog/writepost">New article</a>
 				</div>
 		</div>
 </div>

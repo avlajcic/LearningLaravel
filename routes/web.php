@@ -28,3 +28,6 @@ Route::group(['prefix' => 'blog'], function () {
   Route::get('/deleteArticle/{id}', 'BlogController@destroy')->name('deleteArticle');
   Route::post('/comment', 'CommentsController@store')->name('storeComment');
 });
+
+  Route::get('/uhp', 'UhpController@index');
+  Route::post('/uhp', 'UhpController@solve')->name('solveUhpTask');

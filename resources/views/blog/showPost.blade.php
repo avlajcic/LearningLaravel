@@ -76,7 +76,6 @@ $( document ).ready( function() {
 	        url: "{{ route('storeComment') }}",
 	        data: $(this).serialize(),
 	        success: function( msg ) {
-						console.log(msg)
 						if(msg.name == null)
 							msg.name = "Anonymous"
 						$( "#commentForm" ).toggle( 'slow' );

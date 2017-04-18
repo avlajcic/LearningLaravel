@@ -28,9 +28,11 @@
 				<img class="img-responsive" src="http://placehold.it/700x400" alt="">
 			</a>
 			<h3>
-				<a href="#">Project Two</a>
+				<a href="/uhp">UHP Digital task</a>
 			</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+			<p>Solution for task found on UHP Digital company web site. <br>
+				<a href="http://www.uhp-digital.com/hr/job-application">Link</a>
+			</p>
 		</div>
 	</div>
 	<!-- /.row -->
