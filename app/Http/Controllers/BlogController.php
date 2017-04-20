@@ -20,7 +20,7 @@ class BlogController extends Controller
 
     public function show($id){
       $article = Article::find($id);
-      $comments = Comment::where('post_id', $id)->orderBy('id', 'desc')->get();
+      $comments = Comment::where('article_id', $id)->orderBy('id', 'desc')->get();
       return view('blog/showPost', ['article' => $article, 'comments' => $comments]);
     }
 
@@ -31,6 +31,10 @@ class BlogController extends Controller
     }
 
     public function destroy($id){
+      $comments = Article::find($id)->comments;
+      foreach ($comments as $comment) {
+        Comment::destroy($comment->id);
+      }
       Article::destroy($id);
       return redirect('/blog');
     }

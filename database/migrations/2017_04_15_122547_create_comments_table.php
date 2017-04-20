@@ -17,9 +17,7 @@ class CreateCommentsTable extends Migration
           $table->increments('id');
           $table->string('name')->default('Anonymous');
           $table->text('comment');
-          $table->integer('post_id');
-
-          $table->foreign('post_id')->references('id')->on('articles');
+          $table->integer('article_id');
       });
     }
 
@@ -30,6 +28,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-          Schema::dropIfExists('comments');
+        Schema::dropIfExists('comments');
     }
 }

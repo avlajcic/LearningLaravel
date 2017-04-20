@@ -24,7 +24,7 @@
 			<p>A simple blog application where you can add, search or comment posts.</p>
 		</div>
 		<div class="col-md-6 portfolio-item">
-			<a href="#">
+			<a href="/uhp">
 				<img class="img-responsive" src="http://placehold.it/700x400" alt="">
 			</a>
 			<h3>

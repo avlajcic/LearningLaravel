@@ -32,7 +32,7 @@
 	 							<label for="comment">Comment:</label>
 	 							<textarea class="form-control" rows="5" name="comment"></textarea>
 	 						</div>
-							<input type="text" value="{{ $article->id }}" hidden="" name="post_id">
+							<input type="text" value="{{ $article->id }}" hidden="" name="article_id">
 
 	 						<br>
 	 						<input type="submit" class="btn btn-info" value="Comment">

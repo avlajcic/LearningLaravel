@@ -16,8 +16,9 @@ class CommentsController extends Controller
     else
       $comment->name = $request->input('name');
     $comment->comment = $request->input('comment');
-    $comment->post_id = $request->input('post_id');
-    
+    $comment->article_id = $request->input('article_id');
+
+    error_log($comment);
     $comment->save();
     return $comment;
   }
