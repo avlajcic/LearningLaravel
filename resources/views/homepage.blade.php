@@ -16,7 +16,7 @@
 	<div class="row">
 		<div class="col-md-6 portfolio-item">
 			<a href="/blog">
-				<img class="img-responsive" src="{{ secure_asset('images/blog.png',array(),true) }}" alt="">
+				<img class="img-responsive" src="{{ secure_asset('images/blog.png',array(),true) }}" alt="BlogPage">
 			</a>
 			<h3>
 				<a href="/blog">Blog</a>
@@ -25,7 +25,7 @@
 		</div>
 		<div class="col-md-6 portfolio-item">
 			<a href="/uhp">
-				<img class="img-responsive" src="http://placehold.it/700x400" alt="">
+				<img class="img-responsive" src="{{ secure_asset('images/uhp.png',array(),true) }}" alt="UhpTaskPage">
 			</a>
 			<h3>
 				<a href="/uhp">UHP Digital task</a>

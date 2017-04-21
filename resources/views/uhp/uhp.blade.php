@@ -11,6 +11,23 @@
 						Uhp Digital <small>task</small>
 				</h1>
 
+				<h4><strong>Note</strong></h4>
+				<p>Sometimes on some computers Heroku will return server error after clicking "Solve" for unknown
+					reason (everything works locally, I swear :) ). Somewhere there is a problem with AJAX calls. Still
+					working on a fix. <br>
+					There is a <strong>strange fix </strong> though.
+					Go to Blog part, comment something and then everything should work. This also fixes glyphicons
+					sometimes not loading.
+				</p>
+				<br>
+				<h4><strong>Task</strong></h4>
+				<p>Input is JSON matrix. Task is:<br>
+					1) Sort first row in ascending order. Then, move all the other rows in same way.
+							Eg: [3 2 1] [2 4 1] -> [1 2 3] [1 4 2] <br>
+					2) Find largest element in matrix without first row. Then, calculate sum of coordinates where
+							largest element appears. Coordinates start with [1,1].
+
+				</p>
 				<form action="/uhp" method="post" id="jsonForm">
 					 	{{ csrf_field() }}
 						<div class="form-group">
