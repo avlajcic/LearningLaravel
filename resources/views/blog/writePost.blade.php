@@ -1,6 +1,6 @@
 @extends('layouts.app')
 <meta name="csrf-token" content="{{ csrf_token() }}" />
-@section('title', 'Blog')
+@section('title', 'Write post - Blog')
 
 @section('extraNav')
 <li>

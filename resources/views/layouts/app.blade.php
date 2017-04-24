@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Laravel learning - @yield('title')</title>
+    <title>@yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ secure_asset('css/bootstrap.min.css',array(),true) }}" rel="stylesheet">

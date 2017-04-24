@@ -31,3 +31,13 @@ Route::group(['prefix' => 'blog'], function () {
 
   Route::get('/uhp', 'UhpController@index');
   Route::post('/uhp', 'UhpController@solve')->name('solveUhpTask');
+
+// ----TO DO ROUTES----
+Route::group(['prefix' => 'todo'], function () {
+
+  Route::get('/', 'TodoController@index')->name('todoIndex');
+  Route::post('/register', 'Auth\RegisterController@register')->name('register');
+  Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+  Route::post('/login', 'Auth\LoginController@login')->name('login');
+});
+//Auth::routes();
