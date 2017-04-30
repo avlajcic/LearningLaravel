@@ -36,6 +36,7 @@ Route::group(['prefix' => 'blog'], function () {
 Route::group(['prefix' => 'todo'], function () {
 
   Route::get('/', 'TodoController@index')->name('todoIndex');
+  Route::post('/create', 'TodoController@store')->name('addTask');
   Route::post('/register', 'Auth\RegisterController@register')->name('register');
   Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
   Route::post('/login', 'Auth\LoginController@login')->name('login');

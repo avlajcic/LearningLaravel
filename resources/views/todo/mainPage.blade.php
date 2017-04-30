@@ -2,6 +2,11 @@
 
 @section('title', 'Home - ToDo')
 
+@section('extraCSS')
+<link href="{{ secure_asset('css/jquery-ui.css',array(),true) }}" rel="stylesheet">
+<link href="{{ secure_asset('css/jquery-ui.theme.css',array(),true) }}" rel="stylesheet">
+@endsection
+
 @section('extraNav')
 <li>
 		<a href="/blog">To Do</a>
@@ -18,13 +23,32 @@
 						To Do
 				</h1>
 
-
 				@if (Auth::check())
-				    <p>Hey there!</p>
 						<form method = 'post' action={{route('logout')}} id="loginForm">
 							{{ csrf_field() }}
 								<button type='submit' id ='logoutButton' class='btn btn-primary'>Logout</button>
 						</form>
+						@foreach ($tasks as $task)
+									<div>
+										<h3 >{{$task->title}}</h3>
+										<p>{{$task->dueDate}}</p>
+									 	<p>{{$task->about}}</p>
+										<button id="done_{{$task->id}}" type="button" title="Completed" class="addbtn btn btn-success btn-circle"><i class="glyphicon glyphicon-ok"></i></button>
+									 	<button id="delete_{{$task->id}}'" type="button" title="Remove" class="deletebtn btn btn-danger btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+										<hr>
+								 	</div>
+						@endforeach
+						
+							<button type="button" title="Dodaj novi zadatak" class="btn btn-primary btn-circle addtask"><i class="glyphicon glyphicon-plus"></i></button>
+
+					<br><form id="newTaskForm" method = 'post' action={{route('addTask')}}><br>
+								{{ csrf_field() }}
+								 <input type='text' class='form-control' placeholder='Title' name='title' required/><br>
+								 <input type='text'  placeholder='Date' id='datepicker' name='dueDate' readonly><br><br>
+								 <input type='text' class='form-control' placeholder='About' name='about'/><br>
+								 <input type="text" value="{{ Auth::user()->id }}" hidden="" name="user_id">
+								 <button type='submit' name ='addTaksButton' class='btn btn-primary'>Add new task</button>
+ 							 </form>
 				@else
 				<form method = 'post' action={{route('login')}} id="loginForm">
 					{{ csrf_field() }}
@@ -90,9 +114,15 @@
 @endsection
 
 @section('scripts')
+<script src="{{ secure_asset('js/jquery-ui.js',array(),true) }}"></script>
 <script>
 $( document ).ready( function() {
 	$("#registerForm" ).hide();
+	$("#newTaskForm" ).hide();
+	$( "#datepicker" ).datepicker({
+			 dateFormat: "mm/dd/yy",
+			 minDate: new Date()
+	 });
 	$("#switchForm").click(function(event){
 			if ($("#loginForm").is(":visible"))
 					$(this).html("Or log in");
@@ -100,6 +130,10 @@ $( document ).ready( function() {
 					$(this).html("Or register");
 		 	$("#loginForm").toggle(1000);
 		 	$("#registerForm").toggle(1000);
+	 });
+
+	 $('.addtask').click(function(){
+			$("#newTaskForm").toggle(1000);
 	 });
 
 });

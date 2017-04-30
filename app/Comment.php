@@ -11,12 +11,12 @@ class Comment extends Model
    ];
 
    protected $attributes = [
-      'name' => 'nonymous'
+      'name' => 'Anonymous'
     ];
    public $timestamps = false;
 
    public function article()
    {
     return $this->belongsTo('App\Article');
-    }
+   }
 }
