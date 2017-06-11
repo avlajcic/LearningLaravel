@@ -9,7 +9,7 @@
 
 @section('extraNav')
 <li>
-		<a href="/blog">To Do</a>
+		<a href="/todo">To Do</a>
 </li>
 @endsection
 
@@ -38,7 +38,7 @@
 										<hr>
 								 	</div>
 						@endforeach
-						
+
 							<button type="button" title="Dodaj novi zadatak" class="btn btn-primary btn-circle addtask"><i class="glyphicon glyphicon-plus"></i></button>
 
 					<br><form id="newTaskForm" method = 'post' action={{route('addTask')}}><br>

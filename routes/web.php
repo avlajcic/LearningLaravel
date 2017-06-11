@@ -42,3 +42,5 @@ Route::group(['prefix' => 'todo'], function () {
   Route::post('/login', 'Auth\LoginController@login')->name('login');
 });
 //Auth::routes();
+
+Route::get('/ruap', 'RuapController@index')->name('ruapIndex');

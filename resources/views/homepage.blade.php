@@ -47,6 +47,17 @@
 			</h3>
 			<p>A To-do application where you can create your to do list. Login and registering is available. *IN PROGRESS*</p>
 		</div>
+
+		<div class="col-md-6 portfolio-item">
+			<a href="/ruap">
+				<img class="img-responsive" src="http://placehold.it/700x400" alt="ToDoPage">
+			</a>
+			<h3>
+				<a href="/ruap">RUAP</a>
+			</h3>
+			<p>Application for faculty course.</p>
+		</div>
+	</div>
 	<!-- /.row -->
 @endsection
 
