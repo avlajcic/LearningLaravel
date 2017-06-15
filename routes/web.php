@@ -44,3 +44,4 @@ Route::group(['prefix' => 'todo'], function () {
 //Auth::routes();
 
 Route::get('/ruap', 'RuapController@index')->name('ruapIndex');
+Route::post('/ruap/predict', 'RuapController@predict')->name('ruapPredict');

@@ -23,15 +23,15 @@
 						Ruap
 				</h1>
 
-				<form method="post" action="">
+				<form method="post" action={{route('ruapPredict')}}>
 					{{ csrf_field() }}
 					<div class="form-group">
 						<h4>Sex</h4>
 						<label class="radio-inline">
-	      			<input type="radio" name="gender" value="m" checked>Male<br>
+	      			<input type="radio" name="gender" value="M" checked>Male<br>
 	    			</label>
 						<label class="radio-inline">
-							<input type="radio" name="gender" value="f">Female<br>
+							<input type="radio" name="gender" value="F">Female<br>
 						</label>
 					</div>
 
@@ -43,20 +43,20 @@
 					<div class="form-group">
 						<h4>Place of living</h4>
 						<label class="radio-inline">
-	      			<input type="radio" name="address" value="urban" checked>Urban<br>
+	      			<input type="radio" name="address" value="U" checked>Urban<br>
 	    			</label>
 						<label class="radio-inline">
-							<input type="radio" name="address" value="rural">Rural<br>
+							<input type="radio" name="address" value="R">Rural<br>
 						</label>
 					</div>
 
 					<div class="form-group">
 						<h4>Family size</h4>
 						<label class="radio-inline">
-	      			<input type="radio" name="famsize" value="le3" checked>Less or equal to 3<br>
+	      			<input type="radio" name="famsize" value="LE3" checked>Less or equal to 3<br>
 	    			</label>
 						<label class="radio-inline">
-							<input type="radio" name="famsize" value="ge3">Greater then 3<br>
+							<input type="radio" name="famsize" value="GT3">Greater then 3<br>
 						</label>
 					</div>
 
@@ -125,6 +125,11 @@
 					</div>
 
 					<div class="form-group">
+						<h4>Number of absences (0-99)</h4>
+					 	<input type="number" name="absences" min="0" max="99" value ="0" class="form-control">
+				 	</div>
+
+					<div class="form-group">
 						<h4>Workday alcohol consumption</h4>
 						<select name="dalc" class="form-control" >
 							<option value="1">Very low</option>
@@ -159,13 +164,22 @@
 					<div class="form-group">
 						<h4>Do you want to pursuit higher education</h4>
 						<label class="radio-inline">
-	      			<input type="radio" name="higher " value="yes" checked>Yes<br>
+	      			<input type="radio" name="higher" value="yes" checked>Yes<br>
 	    			</label>
 						<label class="radio-inline">
-							<input type="radio" name="higher " value="no">No<br>
+							<input type="radio" name="higher" value="no">No<br>
 						</label>
 					</div>
 
+					<div class="form-group">
+						<h4>Grade in first semester (1-5)</h4>
+	      			<input type="number" step="0.01" name="g1" class="form-control" min=1 max=5 value=1.00><br>
+					</div>
+
+					<div class="form-group">
+						<h4>Grade in second semester (1-5)</h4>
+	      			<input type="number" step="0.01" name="g2" class="form-control" min=1 max=5 value=1.00><br>
+					</div>
 					<!-- TODO add grade inputs -->
 					<button type='submit' name ='loginButton' class='btn btn-primary'>Calculate grade</button><br><br>
 				</form>
