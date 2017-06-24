@@ -107,7 +107,7 @@
 						<select name="freetime" class="form-control" >
 						  <option value="1">Very low</option>
 						  <option value="2">Low</option>
-							<option value="3">Normal</option>
+							<option value="3">Medium</option>
 							<option value="4">High</option>
 						  <option value="5">Very high</option>
 						</select>
@@ -118,7 +118,7 @@
 						<select name="goout" class="form-control" >
 						  <option value="1">Very low</option>
 						  <option value="2">Low</option>
-							<option value="3">Normal</option>
+							<option value="3">Medium</option>
 							<option value="4">High</option>
 						  <option value="5">Very high</option>
 						</select>
@@ -134,7 +134,7 @@
 						<select name="dalc" class="form-control" >
 							<option value="1">Very low</option>
 							<option value="2">Low</option>
-							<option value="3">Normal</option>
+							<option value="3">Medium</option>
 							<option value="4">High</option>
 							<option value="5">Very high</option>
 						</select>
@@ -145,7 +145,7 @@
 						<select name="walc" class="form-control" >
 							<option value="1">Very low</option>
 							<option value="2">Low</option>
-							<option value="3">Normal</option>
+							<option value="3">Medium</option>
 							<option value="4">High</option>
 							<option value="5">Very high</option>
 						</select>
