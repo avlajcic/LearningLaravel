@@ -38,7 +38,7 @@
 	<!-- /.row -->
 	<!-- Projects Row -->
 	<div class="row">
-		<div class="col-md-6 portfolio-item">
+		<!-- <div class="col-md-6 portfolio-item">
 			<a href="/todo">
 				<img class="img-responsive" src="http://placehold.it/700x400" alt="ToDoPage">
 			</a>
@@ -46,11 +46,11 @@
 				<a href="/todo">To Do List</a>
 			</h3>
 			<p>A To-do application where you can create your to do list. Login and registering is available. *IN PROGRESS*</p>
-		</div>
+		</div> -->
 
 		<div class="col-md-6 portfolio-item">
 			<a href="/ruap">
-				<img class="img-responsive" src="http://placehold.it/700x400" alt="ToDoPage">
+				<img class="img-responsive" src="{{ secure_asset('images/ruap.png',array(),true) }}" alt="RuapPage">
 			</a>
 			<h3>
 				<a href="/ruap">RUAP</a>

@@ -61,7 +61,11 @@ class RuapController extends Controller
 
     $result = curl_exec($curl);
     $predictedValue = (double)json_decode($result)->Results->output1->value->Values[0][0];
-    return "Your predicted number of points is: ".number_format($predictedValue, 2)." (out of 20).";
+    if($predictedValue < 0){
+      $predictedValue = 0;
+    }
+    return "Your predicted number of points is: ".number_format($predictedValue/20*100, 2)."%"
+      ."<br><a href=".route('ruapIndex').">Back</a>";
   }
 
   public function getPointsFromGrade($grade){

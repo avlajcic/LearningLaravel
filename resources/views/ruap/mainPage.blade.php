@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home - ToDo')
+@section('title', 'Home - Ruap')
 
 @section('extraCSS')
 <link href="{{ secure_asset('css/jquery-ui.css',array(),true) }}" rel="stylesheet">
@@ -172,12 +172,12 @@
 					</div>
 
 					<div class="form-group">
-						<h4>Grade in first semester (1-5)</h4>
+						<h4>Grade in first semester (1.00-5.00)</h4>
 	      			<input type="number" step="0.01" name="g1" class="form-control" min=1 max=5 value=1.00><br>
 					</div>
 
 					<div class="form-group">
-						<h4>Grade in second semester (1-5)</h4>
+						<h4>Grade in second semester (1.00-5.00)</h4>
 	      			<input type="number" step="0.01" name="g2" class="form-control" min=1 max=5 value=1.00><br>
 					</div>
 					<!-- TODO add grade inputs -->
