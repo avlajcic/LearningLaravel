@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Article.php;
+use Article;
 use DB;
 
 class BelaController extends Controller
