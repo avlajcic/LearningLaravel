@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Article;
+use App\Player;
 use DB;
 
 class BelaController extends Controller
 {
-    public function test(){
-      $test = Article::all();
-      return $test;
+    public function players(){
+      $players = Player::all();
+      return $players;
     }
 
 }
