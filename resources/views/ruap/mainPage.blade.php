@@ -180,7 +180,6 @@
 						<h4>Grade in second semester (1.00-5.00)</h4>
 	      			<input type="number" step="0.01" name="g2" class="form-control" min=1 max=5 value=1.00><br>
 					</div>
-					<!-- TODO add grade inputs -->
 					<button type='submit' name ='loginButton' class='btn btn-primary'>Calculate grade</button><br><br>
 				</form>
 
